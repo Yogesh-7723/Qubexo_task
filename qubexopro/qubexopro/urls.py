@@ -24,8 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('students/', views.StudentList.as_view(), name='student-list'),
     path('students/create/',views.StudentCreate.as_view(),name='student_create'),
-    path('students/<int:pk>/view/',views.StudentRetriev.as_view(),name='student_retriv'),
-    path('students/<int:pk>/',views.StudentUpdate.as_view(),name='student_update'),
+    path('students/<int:pk>/',views.StudentRetriev.as_view(),name='student_retriv'),
+    path('students/<int:pk>/update/',views.StudentUpdate.as_view(),name='student_update'),
     path('students/<int:pk>/delete/',views.StudentDestroy.as_view(),name='student_delete'),
     path('api_auth/', include('rest_framework.urls')),
     
